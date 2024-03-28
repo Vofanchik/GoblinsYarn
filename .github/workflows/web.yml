@@ -1,4 +1,4 @@
-name: Goblins
+name: GoblinsYarn
 
 on: [push, pull_request]
 
