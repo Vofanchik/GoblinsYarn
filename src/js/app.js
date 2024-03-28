@@ -1,5 +1,7 @@
-let timeout;
+
 document.addEventListener('DOMContentLoaded', () => {
+  let timeout;
+  let loose = 0;
   const gamepad = document.querySelector(".gamepad");
 
   for (let i = 0; i < 16; i++) {
@@ -29,4 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   timeout = setTimeout(intervalHandler, 1000)
+  clickListener();
+  function clickListener() {
+  cell.forEach((item) => {
+    item.addEventListener("click", () => {
+      if (item.classList.contains("activeCell")) {
+        item.classList.remove("activeCell");
+      }
+      else {
+        item.classList.remove("activeSell");
+        loose += 1;
+
+        if (loose == 5) {
+          clearTimeout(timeout);
+          document.body.innerHTML = '';
+          document.write('Вы проиграли!');
+        }
+      }
+    });
+  });
+}
 })
+
+

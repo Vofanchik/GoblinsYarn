@@ -1,3 +1,7 @@
+* {
+  cursor: url("../img/cur.png"), default;
+}
+
 .gamepad {
   display: grid;
   justify-content: center;
