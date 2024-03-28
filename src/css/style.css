@@ -1,0 +1,14 @@
+.gamepad {
+  display: grid;
+  justify-content: center;
+}
+
+.cell {
+  border: 5px solid rgb(0, 255, 149);
+  height: 100px;
+}
+
+.activeCell {
+  background-image: url(../img/goblin.png);
+  background-position: center;
+}

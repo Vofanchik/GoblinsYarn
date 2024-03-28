@@ -1,0 +1,1 @@
+![CI](https://github.com/Vofanchik/GoblinsYarn/actions/workflows/web.yml/badge.svg)
